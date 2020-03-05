@@ -37,6 +37,7 @@ def get_args():
 def yield_images_from_dir(image_dir):
 
     for dirpath, dnames, fnames in tqdm(os.walk(image_dir)):
+        print(dirpath)
         for f in fnames:
             if f.endswith(".jpg"):
                 image_path = os.path.join(dirpath, f)
